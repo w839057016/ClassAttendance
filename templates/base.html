@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}--系统信息设置平台</title>
+    {% block head%}{% endblock %}
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/base.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+              <img class="logo" src="{{ url_for('static',filename='images/logo.jpg')}}">
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教师信息设置<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{url_for('select_teacher')}}">查询教师信息</a></li>
+                <li><a href="{{url_for('insert_teacher')}}">新增教师信息</a></li>
+                <li><a href="{{url_for('alter_teacher')}}">修改教师信息</a></li>
+                <li><a href="{{url_for('delete_teacher')}}">删除教师信息</a></li>
+              </ul>
+            </li>
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学生信息设置<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">查询学生信息</a></li>
+                <li><a href="#">新增学生信息</a></li>
+                <li><a href="#">修改学生信息</a></li>
+                <li><a href="#">删除学生信息</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程信息设置<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">查询课程信息</a></li>
+                <li><a href="#">新增课程信息</a></li>
+                <li><a href="#">修改课程信息</a></li>
+                <li><a href="#">删除课程信息</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">考勤信息设置<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">查询考勤信息</a></li>
+                <li><a href="#">新增考勤信息</a></li>
+                <li><a href="#">修改考勤信息</a></li>
+                <li><a href="#">删除考勤信息</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <a class="navbar-brand">欢迎使用信息设置系统</a>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    {% block main %}{% endblock %}
+</body>
+</html>

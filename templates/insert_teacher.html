@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+
+{% block title %}教师信息插入{%endblock%}
+
+{% block  head %}
+
+{% endblock %}
+
+{% block main %}
+   <div>
+       <div class="main">
+           <h1>{{message}}</h1>
+           <h3 class="page-title">教师信息插入</h3>
+               <form action="" method="POST">
+                   <div class="form-container">
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="教师姓名" name="teacher_name">
+                       </div>
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="教师工号" name="teacher_id">
+                       </div>
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="教师性别" name="teacher_sex">
+                       </div>
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="教师微信id" name="teacher_wx">
+                       </div>
+                       <div class="form-group">
+                           <button class="btn btn-primary btn-block">立即增加</button>
+                       </div>
+                   </div>
+       </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{% block title %}教师信息修改{%endblock%}
+
+{% block  head %}
+
+{% endblock %}
+
+{% block main %}
+   <div>
+       <h1>{{message}}</h1>
+       <div class="main">
+           <form action="" method="post">
+               请选择将要修改教师信息的工号
+               <select name="teacher_id">
+                   {% for t_id in t %}
+                   <option>{{t_id[0]}}</option>
+                   {% endfor %}
+               </select>
+               <select name="alter_information">
+                   <option>教师姓名</option>
+                   <option>教师微信id</option>
+                   <option>教师性别</option>
+               </select>
+               <input type="text" class="form-control"  name="information">
+               <div class="form-group">
+                   <button class="btn btn-primary btn-block" type="submit">确认修改</button>
+               </div>
+
+           </form>
+       </div>
+   </div>
+{% endblock %}

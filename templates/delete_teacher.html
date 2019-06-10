@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{% block title %}教师信息删除{%endblock%}
+
+{% block  head %}
+
+{% endblock %}
+{% block main %}
+   <div>
+       <h1>{{message}}</h1>
+       <div class="main">
+           <form action="" method="post">
+               请选择将要删除的教师信息的工号
+               <select name="teacher_id">
+                   {% for t_id in t %}
+                   <option>{{t_id[0]}}</option>
+                   {% endfor %}
+               </select>
+               <div class="form-group">
+                   <button class="btn btn-primary btn-block" type="submit">确认删除</button>
+               </div>
+
+           </form>
+       </div>
+   </div>
+{% endblock %}

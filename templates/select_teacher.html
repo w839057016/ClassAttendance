@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{% block title %}教师信息查询{%endblock%}
+
+{% block  head %}
+
+{% endblock %}
+
+{% block main %}
+   <div>
+       <div class="main">
+           <table class="table table-bordered">
+               <tr>
+                   <th>教师姓名</th>
+                   <th>教师工号</th>
+                   <th>教师性别</th>
+                   <th>教师微信id</th>
+               </tr>
+               <tbody>
+                  {% for i in u %}
+                  <tr>
+                      <td>{{i[0]}}</td>
+                      <td>{{i[1]}}</td>
+                      <td>{{i[2]}}</td>
+                      <td>{{i[3]}}</td>
+                  </tr>
+                  {% endfor %}
+               </tbody>
+           </table>
+       </div>
+
+   </div>
+{% endblock %}
